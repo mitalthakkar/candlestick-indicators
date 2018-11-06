@@ -1,0 +1,56 @@
+@import "_variables.scss";
+
+/* Media Query Function */
+$break1024 : 1024px;
+
+/*Custom Media Queries*/
+@mixin media-custom-max($max){
+  @media only screen and (max-width: $max) { @content; }  
+}
+
+@mixin media-custom-min($min){
+  @media only screen and (min-width: $min) { @content; } 
+}
+
+@mixin media-range($min,$max){
+  @if($max > $min){
+    @media only screen and (min-width: $min) and (max-width: $max) { @content; }
+  }  
+}
+
+@mixin media-max-height($max){
+  @media only screen and (max-height: $max) { @content; }  
+}
+
+/* Media Query Function : FINISH */
+
+/*
+ * Font Face
+ */
+//@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}

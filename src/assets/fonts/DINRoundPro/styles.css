@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'DINRoundPro';
+  src: url('DINRoundPro.eot?#iefix') format('embedded-opentype'),  url('DINRoundPro.otf')  format('opentype'),
+	     url('DINRoundPro.woff') format('woff'), url('DINRoundPro.ttf')  format('truetype'), url('DINRoundPro.svg#DINRoundPro') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

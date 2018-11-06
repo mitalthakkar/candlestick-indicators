@@ -1,0 +1,20 @@
+<div class="chart_div" #container></div>
+<!-- <div>
+    <div (click)="fun()" class="toggle">toggle</div>
+    <div (click)="fun1()">close</div>
+</div> -->
+
+<div class="drop_main">
+    <div>
+        <div class="col-1 margin-right-24 pad-left-0 d-inline-block">
+            <div ngbDropdown class="d-inline-block">
+                <button class="btn drop_but" id="dropdownBasic1" ngbDropdownToggle><i class="fas fa-chart-line symbol"></i><span class="btn_text">{{select}}</span></button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="down_area">
+                    
+                    <button class="dropdown-item" *ngFor="let indicator of list_indicators" name="select"
+                        (click)="select_indicator(indicator)">{{indicator}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

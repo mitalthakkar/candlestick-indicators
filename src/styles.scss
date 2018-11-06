@@ -1,0 +1,299 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+// Add bootstrap 4 scss
+@import "assets/scss/variables.scss";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "assets/scss/mixins.scss";
+
+// Load font for header
+@include font-face('signalistregular', '/assets/fonts/signalist/Signalist'); 
+
+@include font-face('DINRoundProRegular', '/assets/fonts/DINRoundPro/DINRoundPro'); 
+
+@include font-face('DINRoundPro-Medi', '/assets/fonts/DINRoundPro-Medi/DINRoundPro-Medi'); 
+
+@include font-face('DINRoundPro-Bold', '/assets/fonts/DINRoundPro-Bold/DINRoundPro-Bold'); 
+
+// genral CSS
+body {
+    font-family: $DINRoundProRegular;
+}
+
+.btn-wallet {
+    color: #3F51B5;
+    padding: 5px 30px;
+    background-color: $white-color;
+    border-radius: 13px;
+    -webkit-box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.03);
+    -moz-box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.03);
+    box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.03);
+
+    i {
+        margin-right: 5px;
+    }
+
+    &:hover {
+        -webkit-box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.20);
+        -moz-box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.20);
+        box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.20);
+    }
+    &:focus {
+        -webkit-box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.03);
+        -moz-box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.03);
+        box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.03);
+    }
+}
+.margin-left-xs {
+    margin-left: 5px;
+}
+.margin-top-24{
+    margin-top: 24px;
+}
+.margin-bottom-24{
+    margin-bottom: 24px;
+}
+.padding-top-24{
+    padding-top:24px;
+}
+.padding-top-12{
+    padding-top:12px;
+}
+.padding-bottom-24{
+    padding-bottom: 24px;
+}
+.padding-left-24{
+    padding-left: 24px !important;
+}
+.padding-right-24{
+    padding-right: 24px;
+}
+.margin-right-24{
+    margin-right: 24px !important;
+}
+button:focus {
+   box-shadow: none !important;
+}
+*:focus{
+    outline: none;
+}
+.margin-right-12{
+    margin-right: 12px;
+}
+.margin-left-24{
+    margin-left: 24px;
+}
+.br-13{
+    border-radius: 13px;
+    border: none;
+}
+/* For Firefox */
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+/* Webkit browsers like Safari and Chrome */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input:focus {
+    box-shadow: none !important;
+    outline: none !important;
+    border-color:#ced4da !important;
+}
+.padding_0{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.main_div{
+    background-color: $grey;
+}
+.padding-bottom-12{
+    padding-bottom: 12px;
+}
+.padding-top-8{
+    padding-top: 8px;
+}
+ /* ......Angular scrollbar css........ */
+    
+ ::ng-deep .ng-scrollbar{
+    background-color:$white-color !important;
+    // z-index: 4 !important;
+}
+::ng-deep .ng-scrollbar-thumb{
+    background-color: $light-black !important ;
+    opacity: 0.26;
+    height: 72px !important;
+    z-index: 5 !important;
+}
+::ng-deep .-vertical {
+    bottom: 0px !important;
+    top:0px !important;
+}
+
+.main_table{
+
+    height: 267px;
+    .title_table_medium{
+        opacity: 0.59;
+        font-family:$DINRoundProBold;
+        font-size: 14px;
+        color: $purpol-color;
+        letter-spacing: 2px;
+        line-height: 24px;
+        margin-left: 23px;
+        margin-top: 24px;
+        margin-bottom: 0px;
+        padding-left: 7px;
+        padding-right:7px;
+        cursor: pointer;
+        float: left;
+    }
+    .active {
+        background-color: rgba(90, 106, 192, 0.08);
+        border-radius: 6px;
+        } 
+        .title_table{
+        opacity: 0.59;
+        font-family:$DINRoundProBold;
+        font-size: 14px;
+        color: $light-black;
+        letter-spacing: 2px;
+        line-height: 24px;
+        padding-left: 30px;
+        padding-top: 24px;
+        margin-bottom: 0px;
+    }
+    .table_header{
+        margin-bottom: 0px !important;
+        -webkit-box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.06);
+        -moz-box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.06);
+        box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.06);
+        
+            .table_label{
+                opacity: 0.59;
+                font-size: 12px;
+                color: $light-black;
+                letter-spacing: 0;
+                border-top: none !important;
+                border-bottom: none !important;
+                font-weight: 100 !important;
+            }
+        }
+      
+    }
+  
+.card{
+    -webkit-box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.03) !important;
+    -moz-box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.03) !important;
+    box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.03) !important;
+    
+    &:hover{
+        -webkit-box-shadow: 0px 14px 14px 0px rgba(0, 0, 0, 0.03) !important;
+        -moz-box-shadow: 0px 14px 14px 0px rgba(0, 0, 0, 0.03) !important;
+        box-shadow: 0px 14px 14px 0px rgba(0, 0, 0, 0.03) !important;
+    }
+}
+@media (min-width: 1750px)
+{
+    .container
+    {
+        max-width: 1550px;
+    }
+}
+
+@include media-range($window-midsmaller,$window-midbigger){
+    .container
+    {
+        max-width: 1250px;
+    }
+  }
+
+  // toaster css for all components
+  .toaster1{
+    background-color: $purpol-color;
+    color: $white-color; 
+    align-content: right;
+    text-align: center;
+    // position: fixed;
+    max-width: 45%;
+    width: 23%;
+    box-sizing: border-box;
+    border-radius: 5px 5px 5px 5px;
+    display: flex;
+    justify-content: center;
+    position: absolute; 
+    z-index: 1000;
+  }
+.toaster-cover{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: -146px;
+    margin-top: 10px;
+    z-index: 1;
+}
+.toaster{
+    background-color: #b4b4b3;
+    color: black; 
+    opacity: 0.5;
+    align-content: center;
+    text-align: center;
+}
+
+.toast-title{
+    vertical-align: middle;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+//validations error
+.error_class{
+    color: $red;
+    font-size: 14px;
+}
+
+// loader css start
+@keyframes dot-keyframes {
+  0% {
+    opacity: 0.4;
+    transform: scale(1, 1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(1, 1);
+  }
+}
+
+.loading-dots--dot {
+  animation: dot-keyframes 1.5s infinite ease-in-out;
+  background-color: #000;
+  border-radius: 10px;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 2px;
+}
+.loading-dots--dot:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.loading-dots--dot:nth-child(3) {
+  animation-delay: 1s;
+}
+.main_loader{
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+}
+
+// / loader css end /
+.cursor{
+    cursor: pointer;
+}
